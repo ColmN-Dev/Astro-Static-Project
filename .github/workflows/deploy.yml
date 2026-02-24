@@ -10,13 +10,9 @@ permissions:
   pages: write
   id-token: write
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: Astro-Static-Project
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,11 +21,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "18"
+          cache: "npm"
+          cache-dependency-path: Astro-Static-Project/package-lock.json
 
       - name: Install dependencies
+        working-directory: Astro-Static-Project
         run: npm ci
 
       - name: Build
+        working-directory: Astro-Static-Project
         run: npm run build
 
       - name: Upload artifact
