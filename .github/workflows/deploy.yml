@@ -22,14 +22,14 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run:  npm install
-        working-directory: ./project
+        working-directory: ./Astro-Static-Project
       - name: Build
         run:  npm run build
-        working-directory: ./project
+        working-directory: ./Astro-Static-Project
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./project/dist
+          path: ./Astro-Static-Project/dist
 
   deploy:
     needs: build
