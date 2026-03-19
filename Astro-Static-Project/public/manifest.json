@@ -1,0 +1,26 @@
+{
+  "name": "Meath Saykan Combat",
+  "short_name": "Saykan Combat",
+  "start_url": "/Astro-Static-Project/",
+  "scope": "/Astro-Static-Project/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/Astro-Static-Project/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/Astro-Static-Project/images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/Astro-Static-Project/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
